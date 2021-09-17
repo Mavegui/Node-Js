@@ -1,0 +1,42 @@
+
+
+<!--NAVBAR -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #d3d3d3;">
+     <div class="container-fluid">
+         <a class="navbar-brand" href="/"> Histórias engraçadas</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+         <a class="nav-link active" aria-current="page" href="/">Home</a>
+         </li>
+         <li class="nav-item">
+         <a class="nav-link" href="/user">Postar</a>
+         </li>
+         <li class="nav-item">
+         <a class="nav-link" href="#">Sobre</a>
+         </li>
+         </ul>
+         <span class="navbar-text">
+         #HistóriasEngraçadas
+         </span>
+   </div>
+   </div>
+   </nav>
+
+<!--Fim da navbar-->
+{{#each metod}}
+     <figure class="text-center">
+        <blockquote class="blockquote">
+          <p>História aleatória</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            Postada por <cite title="Source Title">{{nome}}</cite>
+        </figcaption>
+        <p class="font-monospace">{{conto}}</p>
+        <a href="/deletar/{{id}}"><button type="button" name="button" class="btn btn-primary btn-sm">Deletar</button></a>
+        </figure>
+        <hr>
+{{/each}}
